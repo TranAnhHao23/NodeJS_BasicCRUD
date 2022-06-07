@@ -1,0 +1,28 @@
+<div class="mt-4">
+    <h3>USER LIST</h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Address</th>
+            <th scope="col" colspan="2"></th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each users}}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.age}}</td>
+            <td>{{this.gender}}</td>
+            <td>{{this.address}}</td>
+            <td><a href="/users/edit/{{this._id}}">EDIT</a></td>
+            <td><a href="/users/delete/{{this._id}}" onclick= "return confirm('Do you want to Delete?')">DELETE</a></td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>
