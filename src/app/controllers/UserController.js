@@ -2,6 +2,7 @@ const User = require('../model/User')
 const express = require('express')
 const {mongooseToObject, multipleMongooseToObject} = require('../../util/mongoose')
 
+
 class UserController {
 
     // [GET] /users/createDashboard
